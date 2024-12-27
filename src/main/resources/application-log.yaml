@@ -1,0 +1,25 @@
+
+
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: suyh
+
+
+logging:
+  level:
+    root: info
+  file:
+    name: /tmp/communityEbusiness/logs/communityEbusiness.log
+  logback:
+    rollingpolicy:
+      clean-history-on-start: true
+      file-name-pattern: /tmp/communityEbusiness/logs/%d{yyyy-MM-dd}/communityEbusiness.%02i.log
+      max-file-size: 20MB
+
+
+
+

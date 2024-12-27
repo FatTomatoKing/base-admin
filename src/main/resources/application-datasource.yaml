@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    dynamic:
+      enabled: true
+      strict: true
+      primary: "mysql-base"
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+
+
+
+
+
+
+

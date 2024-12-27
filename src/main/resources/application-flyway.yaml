@@ -1,0 +1,30 @@
+
+spring:
+  flyway:
+    enabled: false
+
+---
+spring:
+  config:
+    activate:
+      on-profile: suyh
+
+biz:
+  base:
+    flyway-mysql-base:
+      enabled: true
+      locations:
+        - "sqls/mysql"
+    flyway-pgsql-base:
+      enabled: false
+      locations:
+        - "sqls/pgsql"
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+

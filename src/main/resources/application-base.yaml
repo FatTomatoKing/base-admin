@@ -1,0 +1,26 @@
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: suyh
+
+
+
+
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: wtdev
+
