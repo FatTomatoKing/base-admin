@@ -5,6 +5,24 @@ spring:
       strict: true
       primary: "mysql-base"
 
+---
+spring:
+  config:
+    activate:
+      on-profile: zard
+
+  datasource:
+    hikari:
+      mysql-base:
+        jdbc-url: jdbc:mysql://192.168.8.124:3306/zard_cdap_cds?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=Asia/Shanghai
+        username: zard_cdap_cds
+        password: zard_cdap_cds
+        driver-class-name: com.mysql.cj.jdbc.Driver
+      pgsql-base:
+        jdbc-url: jdbc:postgresql://192.168.8.124:5432/zardpgcdap?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=Asia/Shanghai
+        username: zardpgcdap
+        password: zardpgcdap
+        driver-class-name: org.postgresql.Driver
 
 ---
 spring:

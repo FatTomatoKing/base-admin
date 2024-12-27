@@ -12,7 +12,7 @@ spring:
 biz:
   base:
     flyway-mysql-base:
-      enabled: true
+      enabled: false
       locations:
         - "sqls/mysql"
     flyway-pgsql-base:

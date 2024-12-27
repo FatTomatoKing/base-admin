@@ -16,8 +16,21 @@ spring:
 spring:
   config:
     activate:
-      on-profile: suyh
+      on-profile: zard
 
+  redis:
+    open: false
+    database: 3
+    host: 192.168.8.124
+    port: 6379
+    password: zard
+    timeout: 6000ms
+    jedis:
+      pool:
+        max-active: 1000
+        max-wait: -1ms
+        max-idle: 10
+        min-idle: 5
 # 目前暂时没用到redis
 
 ---
