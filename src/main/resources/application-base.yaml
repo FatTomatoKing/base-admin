@@ -1,16 +1,3 @@
-
-
----
-spring:
-  config:
-    activate:
-      on-profile: suyh
-
-
-
-
-
-
 ---
 spring:
   config:
@@ -18,9 +5,5 @@ spring:
       on-profile: dev
 
 
----
-spring:
-  config:
-    activate:
-      on-profile: wtdev
+
 

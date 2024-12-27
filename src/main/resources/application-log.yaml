@@ -6,7 +6,7 @@
 spring:
   config:
     activate:
-      on-profile: suyh
+      on-profile: zard
 
 
 logging:

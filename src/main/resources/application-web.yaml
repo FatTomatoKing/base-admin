@@ -13,7 +13,7 @@ server:
 spring:
   config:
     activate:
-      on-profile: suyh,dev
+      on-profile: zard,dev
 
 server:
   error:
