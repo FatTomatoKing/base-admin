@@ -85,7 +85,7 @@ public class TaskInitCampaign {
                     .setChannel(cohortCostCalculateKeyedVo.getChannel()).setSource(cohortCostCalculateKeyedVo.getSource())
                     .setHistoryDaysRangeAdver(cohortCostCalculateKeyedVo.getHistoryDaysRangeAdver())
                     .setHistoryDaysRangeFissile(cohortCostCalculateKeyedVo.getHistoryDaysRangeFissile())
-                    .setCampaignId(cohortCostCalculateKeyedVo.getCampaignId()).setCampaignName()
+                    .setCampaignId(cohortCostCalculateKeyedVo.getCampaignId())
             ;
 
             long activeSum = pgCohortCostCalculateTrends.stream().mapToLong(PgCohortCostCalculateTrend::getActive).sum();
