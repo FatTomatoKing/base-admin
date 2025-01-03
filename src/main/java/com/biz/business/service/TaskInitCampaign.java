@@ -14,6 +14,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ReflectionUtils;
 
 import javax.annotation.PostConstruct;
 import java.lang.reflect.Field;
@@ -33,11 +34,10 @@ public class TaskInitCampaign {
 
     private final PgCohortCostCalculateTrendMapper pgCohortCostCalculateTrendMapper;
 
-
-
     private final CohortCampaignRoiOriginMapper cohortCampaignRoiOriginMapper;
 
     private final CohortCampaignRoasOriginMapper cohortCampaignRoasOriginMapper;
+
 
     @Data
     static class CohortCostCalculateKeyedVo {
@@ -119,22 +119,10 @@ public class TaskInitCampaign {
 
             BigDecimal withdrawal = dataList.stream().map(PgCohortCostCalculateTrend::getDayWithdraw).reduce(BigDecimal.ZERO, BigDecimal::add);
 
-            Class<? extends PgCohortCampaignRoasOrigin> aClass = pgCohortChannelRoasOrigin.getClass();
-            Field[] fields = aClass.getDeclaredFields();
-
-            Arrays.stream(fields).forEach(field -> {
-                field.setAccessible(true);
-                String name = field.getName();
-                String fieldName = "d" + finalI;
-                if (fieldName.equals(name)){
-
-                    try {
-                        field.set(pgCohortChannelRoasOrigin, rechargeAll);
-                    } catch (IllegalAccessException e) {
-                        throw new RuntimeException(e);
-                    }
-                }
-            });
+            String fieldName = "d" + finalI;
+            Field field = ReflectionUtils.findField(PgCohortCampaignRoasOrigin.class, fieldName);
+            ReflectionUtils.makeAccessible(field);
+            ReflectionUtils.setField(field, pgCohortChannelRoasOrigin, rechargeAll);
             pgCohortChannelRoasOrigin.setD0RechargeCount(Math.toIntExact(rechargeCount)).setD0Withdrawal(withdrawal);
         }
     }

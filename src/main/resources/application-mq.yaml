@@ -1,0 +1,23 @@
+#rabbitmq
+spring:
+  rabbitmq:
+    host: 192.168.8.124           # RabbitMQ 服务器地址
+    port: 5672               # 端口号
+    virtual-host: /zardBaseAdmin          # 虚拟主机
+    username: admin          # 用户名
+    password: aiteer          # 密码
+    
+    # 生产者配置
+    template:
+      # 交换机配置
+      exchange: /zardBaseAdminExchange   # 默认交换机名称
+      # 消息确认回调
+      mandatory: true        # 开启消息确认回调
+      routing-key: zardBaseAdminQueue
+
+    # 生产者确认机制
+    publisher-confirm-type: correlated  # 确认消息已发送到交换机
+    publisher-returns: true             # 确认消息已发送到队列
+
+    # 连接配置
+    connection-timeout: 15000           # 连接超时时间

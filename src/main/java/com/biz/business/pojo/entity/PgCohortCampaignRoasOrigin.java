@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -25,6 +26,7 @@ public class PgCohortCampaignRoasOrigin implements Serializable {
     /**
      * 自然天日期
      */
+    @NotNull
     private Integer dates;
 
     /**

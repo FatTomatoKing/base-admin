@@ -27,6 +27,10 @@
         <googleauth.version>1.5.0</googleauth.version>
         <pagehelper.boot.version>1.4.7</pagehelper.boot.version>
         <shiro.version>1.13.0</shiro.version>
+
+        <hutool.version>5.8.35</hutool.version>
+
+        <easyexcel.verion>4.0.3</easyexcel.verion>
     </properties>
 
     <dependencies>
@@ -140,10 +144,10 @@
             <version>${googleauth.version}</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-amqp</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
 
         <!-- tgbot库 -->
         <dependency>
@@ -170,6 +174,18 @@
             <groupId>org.javassist</groupId>
             <artifactId>javassist</artifactId>
             <version>3.30.2-GA</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>${easyexcel.verion}</version>
         </dependency>
 
     </dependencies>
