@@ -44,6 +44,7 @@ public class UserController {
     @RequestMapping(value = "/logout", method = RequestMethod.POST)
     @Permit(required = false)
     public ResponseResult<Boolean> logout() {
+        System.out.println("退出接口被调用");
         return ResponseResult.ofSuccess();
     }
 

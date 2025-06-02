@@ -2,8 +2,11 @@
 spring:
   config:
     activate:
-      on-profile: dev
+      on-profile: zard
 
-
+biz:
+  base:
+    captcha:
+      two-factor-auth-enabled: false
 
 
