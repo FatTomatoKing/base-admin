@@ -1,0 +1,13 @@
+minio:
+  url: http://43.240.220.45:19000  # MinIO 服务器地址
+  accessKey: minio       # MinIO Access Key
+  secretKey: zard-minio       # MinIO Secret Key
+  bucketName: oss        # 默认桶名称
+
+
+
+
+
+
+
+

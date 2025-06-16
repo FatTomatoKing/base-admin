@@ -1,0 +1,18 @@
+
+1.0 更新软件索引
+sudo apt update
+2.0 安装nginx
+sudo apt install nginx
+3.0 启动nginx
+sudo systemctl start nginx
+4.0 设置开机自启
+sudo systemctl enable nginx
+5.0 查看nginx 状态
+sudo systemctl status nginx
+
+6.0 重启nginx
+sudo systemctl restart nginx
+7.0 停止nginx
+sudo systemctl stop nginx
+8.0 重载nginx 配置
+sudo systemctl reload nginx

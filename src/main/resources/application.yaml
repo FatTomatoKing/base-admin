@@ -8,6 +8,7 @@ spring:
       - application-knife4j.yaml
       - application-log.yaml
       - application-message_source.yaml
+      - application-minio.yaml
       - application-mq.yaml
       - application-mybatis.yaml
       - application-redis.yaml
