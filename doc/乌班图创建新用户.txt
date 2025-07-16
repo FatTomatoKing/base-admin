@@ -1,0 +1,19 @@
+1.新增用户
+sudo adduser shopizer
+2. 给用户 sudo 权限（如果需要管理权限）
+sudo usermod -aG sudo shopizer
+
+3.用你原来的用户（有 sudo 权限的）登录，然后执行：
+sudo chown -R shopizer:shopizer /home/shopizer
+
+3. 切换到新用户
+sudo su - shopizer
+
+ls -la /home/shopizer
+
+# 确保你在正确的目录
+cd ~
+pwd  # 应该显示 /home/shopizer
+
+# 创建目录
+mkdir shopizer-server

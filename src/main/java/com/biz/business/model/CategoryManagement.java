@@ -11,16 +11,13 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 /**
- * 品牌管理
- * @TableName brand_management
+ * 分类管理
+ *
+ * @TableName category_management
  */
-@TableName(value ="brand_management")
+@TableName(value = "category_management")
 @Data
-public class BrandManagement implements Serializable {
-
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
-
+public class CategoryManagement implements Serializable {
     /**
      * 主键
      */
@@ -28,14 +25,14 @@ public class BrandManagement implements Serializable {
     private Long id;
 
     /**
-     * 品牌名称
+     * 分类名称
      */
-    private String tmName;
+    private String categoryName;
 
     /**
-     * 品牌链接
+     * 父级id
      */
-    private String logoUrl;
+    private Long parentId;
 
     /**
      * 创建时间
@@ -46,4 +43,7 @@ public class BrandManagement implements Serializable {
      * 修改时间
      */
     private LocalDateTime updated;
+
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
 }

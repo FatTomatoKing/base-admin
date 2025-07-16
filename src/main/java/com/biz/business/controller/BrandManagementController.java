@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@Tag(name = "业务示例接口类")
+@Tag(name = "品牌管理")
 @RestController
 @RequestMapping("/business/brand/management")
 @RequiredArgsConstructor
@@ -31,7 +31,6 @@ public class BrandManagementController {
 
     @GetMapping("/list-page")
     public ResponseResult<?> listPage(PageParam pageParam, BrandManagement brandManagement) {
-        System.out.println(pageParam);
         return ResponseResult.ofSuccess(brandManagementService.listPage(pageParam, brandManagement));
     }
 

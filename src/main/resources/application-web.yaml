@@ -6,7 +6,7 @@ spring:
 server:
   servlet:
     context-path: /prod-api
-  port: 8359
+  port: 8360
 
 
 ---
