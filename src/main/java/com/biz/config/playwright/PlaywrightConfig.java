@@ -35,7 +35,7 @@ public class PlaywrightConfig {
         args.add("--remote-allow-origins=*");
 
         this.browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
-                .setHeadless(false)        // 非无头模式，可以看到浏览器界面
+                .setHeadless(true)        // 非无头模式，可以看到浏览器界面
                 .setChannel("chrome")      // 使用已安装的 Chrome
                 .setSlowMo(50)             // 放慢操作，更容易看清操作过程
                 .setArgs(args)
